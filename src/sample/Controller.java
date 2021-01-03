@@ -9,7 +9,9 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.Scanner;
 
 public class Controller {
     @FXML
@@ -20,19 +22,56 @@ public class Controller {
 
     public void on(){
         String data = tf1.getText();
-        ta1.setText(data);
+        try {
+            FileInputStream f = new FileInputStream("A.txt");
+            Scanner reader2 = new Scanner(f);
 
+            String search = reader2.toString();
+
+            while (reader2.hasNextLine()){
+
+                String s = reader2.nextLine();
+                String str[] = s.split(" ");
+
+                if (data.equals(str[0].trim())) {
+                    ta1.setText(s);
+
+                }
+            }
+            reader2.close();
+        } catch(IOException exception){
+            exception.printStackTrace();
+        }
     }
 
     public void next(javafx.event.ActionEvent event) throws IOException {
-        Parent tableViewParent = FXMLLoader.load(getClass().getResource("scene1.fxml"));
-        Scene tableViewScene = new Scene(tableViewParent);
+        String data = tf1.getText();
+        try {
+            FileInputStream f = new FileInputStream("A.txt");
+            Scanner reader2 = new Scanner(f);
 
-        //This line gets the Stage information
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+            String search = reader2.toString();
 
-        window.setScene(tableViewScene);
-        window.show();
+            while (reader2.hasNextLine()){
+
+                String s = reader2.nextLine();
+                String str[] = s.split(" ");
+
+                if (data.equals(str[0].trim())) {
+                    Parent tableViewParent = FXMLLoader.load(getClass().getResource("scene1.fxml"));
+                    Scene tableViewScene = new Scene(tableViewParent);
+
+                    //This line gets the Stage information
+                    Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+
+                    window.setScene(tableViewScene);
+                    window.show();
+                }
+            }
+            reader2.close();
+        } catch(IOException exception){
+            exception.printStackTrace();
+        }
     }
 
 }
