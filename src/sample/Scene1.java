@@ -11,12 +11,9 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class Scene1 {
-
-    @FXML
-    public TextArea ta2;
+    
 
     public void vote1(javafx.event.ActionEvent event) throws IOException {
-        ta2.setText("Voted!");
         Parent tableViewParent = FXMLLoader.load(getClass().getResource("sample.fxml"));
         Scene tableViewScene = new Scene(tableViewParent);
 
@@ -28,7 +25,6 @@ public class Scene1 {
     }
 
     public void vote2(javafx.event.ActionEvent event) throws IOException {
-        ta2.setText("Voted!");
         Parent tableViewParent = FXMLLoader.load(getClass().getResource("sample.fxml"));
         Scene tableViewScene = new Scene(tableViewParent);
 
@@ -40,7 +36,6 @@ public class Scene1 {
     }
 
     public void vote3(javafx.event.ActionEvent event) throws IOException {
-        ta2.setText("Voted!");
         Parent tableViewParent = FXMLLoader.load(getClass().getResource("sample.fxml"));
         Scene tableViewScene = new Scene(tableViewParent);
 
