@@ -8,8 +8,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-
-<GridPane alignment="center" hgap="10" vgap="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="sample.Controller">
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <columnConstraints>
       <ColumnConstraints />
    </columnConstraints>
@@ -19,7 +18,7 @@
    <children>
       <AnchorPane prefHeight="425.0" prefWidth="489.0">
          <children>
-            <TextField fx:id="tf1" layoutX="75.0" layoutY="60.0" prefHeight="127.0" prefWidth="300.0" />
+            <TextField fx:id="tf1" layoutX="114.0" layoutY="14.0" prefHeight="60.0" prefWidth="348.0" />
             <TextArea fx:id="ta1" layoutX="137.0" layoutY="213.0" prefHeight="200.0" prefWidth="200.0" />
             <Button layoutX="219.0" layoutY="187.0" mnemonicParsing="false" onAction="#on" text="Button" />
             <Button layoutX="399.0" layoutY="242.0" mnemonicParsing="false" onAction="#next" text="Button" />

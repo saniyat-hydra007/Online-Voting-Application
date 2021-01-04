@@ -20,15 +20,13 @@ public class Controller {
     @FXML
     public TextArea ta1;
 
-    public void on(){
+    public void on() {
         String data = tf1.getText();
         try {
             FileInputStream f = new FileInputStream("A.txt");
             Scanner reader2 = new Scanner(f);
 
-            String search = reader2.toString();
-
-            while (reader2.hasNextLine()){
+            while (reader2.hasNextLine()) {
 
                 String s = reader2.nextLine();
                 String str[] = s.split(" ");
@@ -36,10 +34,12 @@ public class Controller {
                 if (data.equals(str[0].trim())) {
                     ta1.setText(s);
 
+                } else {
+                    ta1.setText("No Data Found!");
                 }
             }
             reader2.close();
-        } catch(IOException exception){
+        } catch (IOException exception) {
             exception.printStackTrace();
         }
     }
@@ -52,7 +52,7 @@ public class Controller {
 
             String search = reader2.toString();
 
-            while (reader2.hasNextLine()){
+            while (reader2.hasNextLine()) {
 
                 String s = reader2.nextLine();
                 String str[] = s.split(" ");
@@ -62,14 +62,14 @@ public class Controller {
                     Scene tableViewScene = new Scene(tableViewParent);
 
                     //This line gets the Stage information
-                    Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+                    Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
                     window.setScene(tableViewScene);
                     window.show();
                 }
             }
             reader2.close();
-        } catch(IOException exception){
+        } catch (IOException exception) {
             exception.printStackTrace();
         }
     }
