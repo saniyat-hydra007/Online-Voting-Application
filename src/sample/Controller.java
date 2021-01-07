@@ -74,4 +74,7 @@ public class Controller {
         }
     }
 
+    public void result(javafx.event.ActionEvent event) throws IOException {
+    }
+
 }
