@@ -26,12 +26,12 @@ public class Controller {
             FileInputStream f = new FileInputStream("A.txt");
             Scanner reader2 = new Scanner(f);
 
-            while (reader2.hasNextLine()) {
+            while (reader2.hasNext()) {
 
                 String s = reader2.nextLine();
                 String str[] = s.split(" ");
 
-                if (data.equals(str[0].trim())) {
+                if (data.equals(str[1])) {
                     ta1.setText(s);
 
                 } else {
@@ -57,7 +57,7 @@ public class Controller {
                 String s = reader2.nextLine();
                 String str[] = s.split(" ");
 
-                if (data.equals(str[0].trim())) {
+                if (data.equals(str[1].trim())) {
                     Parent tableViewParent = FXMLLoader.load(getClass().getResource("scene1.fxml"));
                     Scene tableViewScene = new Scene(tableViewParent);
 
