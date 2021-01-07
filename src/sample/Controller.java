@@ -75,7 +75,7 @@ public class Controller {
     }
 
     public void result(javafx.event.ActionEvent event) throws IOException {
-        Parent tableViewParent = FXMLLoader.load(getClass().getResource("admin.fxml"));
+        Parent tableViewParent = FXMLLoader.load(getClass().getResource("scene2.fxml"));
         Scene tableViewScene = new Scene(tableViewParent);
 
         //This line gets the Stage information
