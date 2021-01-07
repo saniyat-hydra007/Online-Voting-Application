@@ -1,10 +1,19 @@
 package sample;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 
 public class Scene2 {
     @FXML
-    TextArea ta12;
+    TextField tf11;
+
+    @FXML
+    TextField tf12;
+
+    public void logIn(){
+
+    }
+
+
 
 }
