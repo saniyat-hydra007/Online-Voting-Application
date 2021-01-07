@@ -23,7 +23,7 @@
             <TextField fx:id="tf1" layoutX="120.0" layoutY="33.0" prefHeight="43.0" prefWidth="345.0" />
             <TextArea fx:id="ta1" layoutX="120.0" layoutY="112.0" prefHeight="166.0" prefWidth="345.0" />
             <Button layoutX="7.0" layoutY="177.0" mnemonicParsing="false" onAction="#on" prefHeight="36.0" prefWidth="96.0" text="Information" />
-            <Button layoutX="174.0" layoutY="339.0" mnemonicParsing="false" onAction="#next" prefHeight="61.0" prefWidth="141.0" text="Vote">
+            <Button layoutX="71.0" layoutY="340.0" mnemonicParsing="false" onAction="#next" prefHeight="61.0" prefWidth="141.0" text="Vote">
                <font>
                   <Font size="27.0" />
                </font></Button>
@@ -32,6 +32,11 @@
                   <Font size="25.0" />
                </font>
             </Label>
+            <Button layoutX="293.0" layoutY="340.0" mnemonicParsing="false" onAction="#result" prefHeight="61.0" prefWidth="141.0" text="Result">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
    </children>
