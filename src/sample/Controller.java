@@ -30,12 +30,12 @@ public class Controller {
 
                 String s = reader2.nextLine();
                 String str[] = s.split(" ");
+//                System.out.println(s);
+//                System.out.println(str[1]);
 
                 if (data.equals(str[1])) {
                     ta1.setText(s);
 
-                } else {
-                    ta1.setText("No Data Found!");
                 }
             }
             reader2.close();
