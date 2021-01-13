@@ -83,4 +83,15 @@ public class Controller {
         window.show();
     }
 
+    public void bot(javafx.event.ActionEvent event) throws IOException {
+        Parent tableViewParent = FXMLLoader.load(getClass().getResource("scene3.fxml"));
+        Scene tableViewScene = new Scene(tableViewParent);
+
+        //This line gets the Stage information
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        window.setScene(tableViewScene);
+        window.show();
+    }
+
 }
