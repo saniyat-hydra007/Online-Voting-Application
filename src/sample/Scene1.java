@@ -21,6 +21,8 @@ public class Scene1 {
 
         window.setScene(tableViewScene);
         window.show();
+
+        
     }
 
     public void vote2(javafx.event.ActionEvent event) throws IOException {
