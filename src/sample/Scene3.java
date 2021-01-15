@@ -23,7 +23,7 @@ public class Scene3 {
     private BufferedReader reader;
 
     public Scene3(){
-        String myName = "Sakib";
+        String myName = "Client";
 
         try {
             Socket socket = new Socket("127.0.0.1", 5000);
@@ -61,6 +61,7 @@ public class Scene3 {
     @FXML
     void msgSend(){
         try {
+
             String msg = msgTextField.getText() + "\n";
             msgTextField.setText("");
             writer.write(msg);
