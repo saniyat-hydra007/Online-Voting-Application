@@ -1,5 +1,7 @@
 package sample;
 
+//counter of entire vote
+
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
 
