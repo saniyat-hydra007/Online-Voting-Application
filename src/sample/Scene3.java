@@ -28,7 +28,7 @@ public class Scene3 {
         String myName = "Client";
 
         try {
-            Socket socket = new Socket("127.0.0.1", 5000);
+            Socket socket = new Socket("127.0.0.1", 4000);
 
             OutputStreamWriter o = new OutputStreamWriter(socket.getOutputStream());
             writer = new BufferedWriter(o);
@@ -36,8 +36,8 @@ public class Scene3 {
             InputStreamReader isr = new InputStreamReader(socket.getInputStream());
             reader = new BufferedReader(isr);
 
-            writer.write(myName + "\n");
-            writer.flush();
+            /*writer.write(myName + "\n");
+            writer.flush();*/
 
             Thread t = new Thread(){
                 public void run(){
