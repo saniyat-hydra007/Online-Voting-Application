@@ -32,7 +32,7 @@ public class Controller {
                 String str[] = s.split(" ");
 
                 if (data.equals(str[1])) {
-                    ta1.setText(s);
+                    ta1.setText("Name: " + str[0] + "\n" + "NID Number: " + str[1] + "\n" + "Age: " + str[2] + "\n" + "Address: " + str[3] + "\n" );
 
                 }
             }
