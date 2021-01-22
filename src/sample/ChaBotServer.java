@@ -18,7 +18,7 @@ class ChatBot {
 
             OutputStreamWriter o = new OutputStreamWriter(socket.getOutputStream());
             BufferedWriter writer = new BufferedWriter(o);
-            writer.write("Bot-> Hello sir. For any information:" + "\n" + "1. Type- 'How to vote' for voting procedude" + "\n");
+            writer.write("Bot-> Hello sir. For any information type:" + "\n" + "1.'how to vote' for voting procedude" + "\n");
             String line = reader.readLine();
             while(line != null){
                 System.out.println(line);
@@ -31,9 +31,9 @@ class ChatBot {
                     writer.write("Bot-> Hello,How Can I help You?" + "\n");
                 }
                 if(line.equals("how to vote")){
-                    writer.write("Bot-> select" + "\n");
+                    writer.write("Bot-> First type your NID card number properly." + "\n");
                 }
-                if(line.equals("How to see my information")){
+                if(line.equals("how to see my information")){
                     writer.write("Bot->Enter your name" + "\n");
                 }
                 if(line.equals("hi")){
