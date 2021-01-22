@@ -26,7 +26,7 @@ public class Scene1 {
         window.setScene(tableViewScene);
         window.show();
 
-        try {
+        /*try {
             FileInputStream f = new FileInputStream("c.txt");
             Scanner reader2 = new Scanner(f);
 
@@ -49,7 +49,7 @@ public class Scene1 {
             reader2.close();
         } catch(IOException exception){
             exception.printStackTrace();
-        }
+        }*/
 
     }
 
