@@ -31,12 +31,12 @@ class ChatBot {
                     writer.write("Bot-> Hello,How Can I help You?" + "\n");
                 }
                 if(line.equals("how to vote")){
-                    writer.write("Bot-> First type your NID card number properly." + "\n");
+                    writer.write("Bot-> First type your NID card number properly." + "\n" + "Then Click on 'Vote', and this will open a page with list of candidates." + "\n" + "Select your favourable candidate sign and press it. Then your vote is done" + "\n");
                 }
                 if(line.equals("how to see my information")){
                     writer.write("Bot->Enter your name" + "\n");
                 }
-                if(line.equals("hi")){
+                if(line.equals("how many times can i vote?")){
                     writer.write("Bot-> Hello,How Can I help You?" + "\n");
                 }
                 writer.flush();
