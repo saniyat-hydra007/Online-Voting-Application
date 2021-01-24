@@ -3,9 +3,14 @@ package sample;
 //client messenger
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 import java.io.*;
 import java.net.Socket;
@@ -35,7 +40,7 @@ public class Scene3 {
 
             InputStreamReader isr = new InputStreamReader(socket.getInputStream());
             reader = new BufferedReader(isr);
-            
+
 
             Thread t = new Thread(){
                 public void run(){
@@ -70,6 +75,17 @@ public class Scene3 {
         catch (IOException e){
             e.printStackTrace();
         }
+    }
+
+    public void back(javafx.event.ActionEvent event) throws IOException {
+        Parent tableViewParent = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        Scene tableViewScene = new Scene(tableViewParent);
+
+        //This line gets the Stage information
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        window.setScene(tableViewScene);
+        window.show();
     }
 }
 
