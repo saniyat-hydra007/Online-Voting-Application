@@ -35,9 +35,7 @@ public class Scene3 {
 
             InputStreamReader isr = new InputStreamReader(socket.getInputStream());
             reader = new BufferedReader(isr);
-
-            /*writer.write(myName + "\n");
-            writer.flush();*/
+            
 
             Thread t = new Thread(){
                 public void run(){
