@@ -19,24 +19,33 @@
    <children>
       <AnchorPane prefHeight="200.0" prefWidth="200.0">
          <children>
-            <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="49.0" prefHeight="67.0" prefWidth="200.0" text="Democrate: ">
+            <Label alignment="CENTER" layoutX="14.0" layoutY="49.0" prefHeight="67.0" prefWidth="200.0" text="Democrate ">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="142.0" prefHeight="67.0" prefWidth="200.0" text="Republican: ">
+            <Label alignment="CENTER" layoutX="14.0" layoutY="142.0" prefHeight="67.0" prefWidth="200.0" text="Republican">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="236.0" prefHeight="67.0" prefWidth="200.0" text="Others: ">
+            <Label alignment="CENTER" layoutX="14.0" layoutY="236.0" prefHeight="67.0" prefWidth="200.0" text="Others ">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <TextArea fx:id="ta1" editable="false" layoutX="240.0" layoutY="49.0" prefHeight="67.0" prefWidth="346.0" />
-            <TextArea fx:id="ta2" editable="false" layoutX="240.0" layoutY="142.0" prefHeight="67.0" prefWidth="346.0" />
-            <TextArea fx:id="ta3" editable="false" layoutX="240.0" layoutY="236.0" prefHeight="67.0" prefWidth="346.0" />
+            <TextArea fx:id="ta1" editable="false" layoutX="240.0" layoutY="49.0" prefHeight="67.0" prefWidth="346.0">
+               <font>
+                  <Font size="24.0" />
+               </font></TextArea>
+            <TextArea fx:id="ta2" editable="false" layoutX="240.0" layoutY="142.0" prefHeight="67.0" prefWidth="346.0">
+               <font>
+                  <Font size="24.0" />
+               </font></TextArea>
+            <TextArea fx:id="ta3" editable="false" layoutX="240.0" layoutY="236.0" prefHeight="67.0" prefWidth="346.0">
+               <font>
+                  <Font size="24.0" />
+               </font></TextArea>
             <Button layoutX="184.0" layoutY="319.0" mnemonicParsing="false" onAction="#srbutton" prefHeight="67.0" prefWidth="232.0" text="Show Result">
                <font>
                   <Font size="24.0" />
