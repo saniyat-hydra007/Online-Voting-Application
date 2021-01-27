@@ -19,7 +19,7 @@ public class Scene2 {
     @FXML
     TextField tf12;
 
-    public void logIn(){
+    public void logIn(javafx.event.ActionEvent event) throws IOException{
         String data = tf11.getText();
         String data2 = tf12.getText();
 
@@ -33,7 +33,15 @@ public class Scene2 {
                 String str[] = s.split(" ");
 
                 if (data.equals(str[0]) && data2.equals(str[1])) {
-                    System.out.println("hey");
+                        Parent tableViewParent = FXMLLoader.load(getClass().getResource("scene4.fxml"));
+                        Scene tableViewScene = new Scene(tableViewParent);
+
+                        //This line gets the Stage information
+                        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+                        window.setScene(tableViewScene);
+                        window.show();
+
                 }
             }
             reader2.close();
