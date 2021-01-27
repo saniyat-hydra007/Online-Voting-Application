@@ -20,6 +20,7 @@ public class Controller {
     @FXML
     public TextArea ta1;
 
+
     public void on() {
         String data = tf1.getText();
         try {
