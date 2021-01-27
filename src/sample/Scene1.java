@@ -10,8 +10,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 
-import java.io.FileInputStream;
-import java.io.IOException;
+import java.io.*;
 import java.util.Scanner;
 
 public class Scene1 {
@@ -25,6 +24,16 @@ public class Scene1 {
 
         window.setScene(tableViewScene);
         window.show();
+        try {
+        BufferedWriter w=new BufferedWriter(new FileWriter("out.txt"));
+        String temp = "a" + "\n";
+        w.write(temp);
+
+        w.close();
+
+        } catch (IOException e){
+            e.printStackTrace();
+        }
         /*
         try {
             BufferedReader r= new BufferedReader(new FileReader("A.txt"));
