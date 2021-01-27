@@ -3,6 +3,7 @@ package sample;
 //counter of entire vote
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 
 import java.io.BufferedReader;
@@ -13,13 +14,14 @@ import java.io.IOException;
 public class Scene4 {
 
     @FXML
-    TextArea resultTa1;
+    public TextArea ta1;
 
     @FXML
-    TextArea resultTa2;
+    public TextArea ta2;
 
     @FXML
-    TextArea resultTa3;
+    public TextArea ta3;
+
 
     BufferedReader reader;
 
@@ -31,14 +33,13 @@ public class Scene4 {
             {
                 lines++;
             }
-            //resultTa1.setText(String.valueOf(lines));
+
             System.out.println(lines);
             reader.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-
 
 }
 
