@@ -25,15 +25,11 @@ public class Scene1 {
         window.setScene(tableViewScene);
         window.show();
         try {
-        BufferedWriter w=new BufferedWriter(new FileWriter("x.txt"));
-        
-        while(s!=null) { String temp = "a" + "\n";
-        w.write(temp);
-            }
-        w.close();
-
-        } catch (IOException e){
-            e.printStackTrace();
+            FileWriter reader = new FileWriter("x.txt", true);
+            reader.write("a" + "\n");
+            reader.close();
+        } catch (IOException ioException) {
+            ioException.printStackTrace();
         }
         /*
         try {
@@ -75,16 +71,15 @@ public class Scene1 {
 
         window.setScene(tableViewScene);
         window.show();
+
         try {
-            BufferedWriter w=new BufferedWriter(new FileWriter("y.txt"));
-            String temp = "b" + "\n";
-            w.write(temp);
-
-            w.close();
-
-        } catch (IOException e){
-            e.printStackTrace();
+            FileWriter reader = new FileWriter("y.txt", true);
+            reader.write("b" + "\n");
+            reader.close();
+        } catch (IOException ioException) {
+            ioException.printStackTrace();
         }
+
     }
 
     public void vote3(javafx.event.ActionEvent event) throws IOException {
@@ -96,16 +91,14 @@ public class Scene1 {
 
         window.setScene(tableViewScene);
         window.show();
+
         try {
-            BufferedWriter w=new BufferedWriter(new FileWriter("z.txt"));
-            String temp = "c" + "\n";
-            w.write(temp);
-
-            w.close();
-
-        } catch (IOException e){
-            e.printStackTrace();
+            FileWriter reader = new FileWriter("z.txt", true);
+            reader.write("c" + "\n");
+            reader.close();
+        } catch (IOException ioException) {
+            ioException.printStackTrace();
         }
-    }
 
+    }
 }
