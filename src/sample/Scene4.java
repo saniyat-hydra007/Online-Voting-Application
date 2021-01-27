@@ -18,15 +18,41 @@ public class Scene4 {
     @FXML
     public TextArea ta3;
 
-                BufferedReader reader = new BufferedReader(new FileReader("x.txt"));
-                int lines = 0;
+    public void srbutton(){
+        BufferedReader reader;
+        BufferedReader reader2;
+        BufferedReader reader3;
+        int l1 = 0;
+        int l2 = 0;
+        int l3 = 0;
+        {
+            try {
+                reader = new BufferedReader(new FileReader("x.txt"));
+                reader2 = new BufferedReader(new FileReader("y.txt"));
+                reader3 = new BufferedReader(new FileReader("z.txt"));
+
                 while (reader.readLine() != null)
                 {
-                    lines++;
+                    l1++;
                 }
-                ta1.setText(lines+" ");
-                System.out.println(lines);
+                while (reader2.readLine() != null)
+                {
+                    l2++;
+                }
+                while (reader3.readLine() != null)
+                {
+                    l3++;
+                }
                 reader.close();
-
+                reader2.close();
+                reader3.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        ta1.setText(l1+" ");
+        ta2.setText(l2+" ");
+        ta3.setText(l3+" ");
+    }
 
 }
