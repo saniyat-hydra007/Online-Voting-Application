@@ -25,7 +25,35 @@ public class Scene1 {
 
         window.setScene(tableViewScene);
         window.show();
-        
+        /*
+        try {
+            BufferedReader r= new BufferedReader(new FileReader("A.txt"));
+
+            //File out =new File("out.txt");
+            BufferedWriter w=new BufferedWriter(new FileWriter("out.txt"));
+
+            String s = r.readLine();
+            while(s!=null){
+                String str[] = s.split(" ");
+                int x = Integer.parseInt(str[0]);
+                String y = str[1];
+                double z = Double.parseDouble(str[2]);
+
+                String temp = x + " " + y + " " + z ;
+                w.write(temp);
+                w.newLine();
+                s=r.readLine();
+            }
+
+            r.close();
+            w.close();
+
+
+        }catch (FileNotFoundException e){
+
+        }catch (IOException e){
+
+        }*/
     }
 
     public void vote2(javafx.event.ActionEvent event) throws IOException {
