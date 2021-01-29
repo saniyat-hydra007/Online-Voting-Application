@@ -44,33 +44,15 @@ public class Controller {
     }
 
     public void next(javafx.event.ActionEvent event) throws IOException {
-        String data = tf1.getText();
-        try {
-            FileInputStream f = new FileInputStream("A.txt");
-            Scanner reader2 = new Scanner(f);
 
-            String search = reader2.toString();
+        Parent tableViewParent = FXMLLoader.load(getClass().getResource("scene5.fxml"));
+        Scene tableViewScene = new Scene(tableViewParent);
 
-            while (reader2.hasNextLine()) {
+        //This line gets the Stage information
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
-                String s = reader2.nextLine();
-                String str[] = s.split(" ");
-
-                if (data.equals(str[1].trim())) {
-                    Parent tableViewParent = FXMLLoader.load(getClass().getResource("scene1.fxml"));
-                    Scene tableViewScene = new Scene(tableViewParent);
-
-                    //This line gets the Stage information
-                    Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-
-                    window.setScene(tableViewScene);
-                    window.show();
-                }
-            }
-            reader2.close();
-        } catch (IOException exception) {
-            exception.printStackTrace();
-        }
+        window.setScene(tableViewScene);
+        window.show();
     }
 
     public void result(javafx.event.ActionEvent event) throws IOException {
