@@ -18,7 +18,7 @@ class ChatBotServer {
 
             OutputStreamWriter o = new OutputStreamWriter(socket.getOutputStream());
             BufferedWriter writer = new BufferedWriter(o);
-            writer.write("Bot-> Hello sir. For any information type:" + "\n" + "1.'how to vote' for voting procedude" + "\n" + "1.'how to see my information' for see your information");
+            writer.write("Bot-> Hello sir. For any information type:" + "\n" + "1.'how to vote' for voting procedude" + "\n" + "1.'how to see my information' for see your information" + "\n");
             String line = reader.readLine();
             while(line != null){
                 System.out.println(line);
@@ -34,10 +34,13 @@ class ChatBotServer {
                     writer.write("Bot-> First type your NID card number properly." + "\n" + "Then Click on 'Vote', and this will open a page with list of candidates." + "\n" + "Select your favourable candidate sign and press it. Then your vote is done" + "\n");
                 }
                 if(line.equals("how to see my information")){
-                    writer.write("Bot->Enter your name" + "\n" + "Click the button 'Information', it will show all your information.");
+                    writer.write("Bot-> First type your NID card number properly." + "\n" + "Then Click on 'Information', and then you can see your all your information." +"\n");
                 }
-                if(line.equals("how many times can i vote?")){
+                if(line.equals("how many times can I vote?")){
                     writer.write("Bot-> You can only vote for one times." + "\n");
+                }
+                if(line.equals("thank you")){
+                    writer.write("Bot-> Welcome. Have a nice day!" + "\n");
                 }
                 writer.flush();
                 line = reader.readLine();
