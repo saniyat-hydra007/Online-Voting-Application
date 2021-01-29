@@ -19,7 +19,7 @@
    <children>
       <AnchorPane prefHeight="200.0" prefWidth="200.0">
          <children>
-            <Label alignment="CENTER" layoutX="14.0" layoutY="49.0" prefHeight="67.0" prefWidth="200.0" text="Democrate ">
+            <Label alignment="CENTER" layoutX="14.0" layoutY="49.0" prefHeight="67.0" prefWidth="200.0" text="Democratic">
                <font>
                   <Font size="24.0" />
                </font>
@@ -29,7 +29,7 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" layoutX="14.0" layoutY="236.0" prefHeight="67.0" prefWidth="200.0" text="Others ">
+            <Label alignment="CENTER" layoutX="14.0" layoutY="236.0" prefHeight="67.0" prefWidth="200.0" text="Libertarian">
                <font>
                   <Font size="24.0" />
                </font>
@@ -51,6 +51,7 @@
                   <Font size="24.0" />
                </font>
             </Button>
+            <Button layoutX="534.0" layoutY="361.0" mnemonicParsing="false" onAction="#home" text="Home" />
          </children>
       </AnchorPane>
    </children>
