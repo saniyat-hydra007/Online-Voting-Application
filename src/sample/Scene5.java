@@ -19,23 +19,13 @@ public class Scene5 {
     private TextField tf1;
 
     @FXML
-    private TextArea ta1;
-
-    @FXML
     private TextField tf2;
 
-    @FXML
-    private TextField tf3;
-
-    public int getRandomNumber(int min, int max) {
-        return (int) ((Math.random() * (max - min)) + min);
-    }
 
     @FXML
     void login(javafx.event.ActionEvent event) throws IOException {
         String data = tf1.getText();
         String data2 = tf2.getText();
-        String data3 = tf3.getText();
 
         try {
             FileInputStream f = new FileInputStream("C.txt");
@@ -47,14 +37,9 @@ public class Scene5 {
                 String s = reader2.nextLine();
                 String str[] = s.split(" ");
 
-//                String s4=String.valueOf(getRandomNumber(1,300));
-//
-//                ta1.setText(str2[Integer.parseInt(s4)]);
-//
-//                System.out.println(str2[Integer.parseInt(s4)]);
 
                 if (data.equals(str[0]) && data2.equals(str[1])) {
-                    Parent tableViewParent = FXMLLoader.load(getClass().getResource("scene1.fxml"));
+                    Parent tableViewParent = FXMLLoader.load(getClass().getResource("scene6.fxml"));
                     Scene tableViewScene = new Scene(tableViewParent);
 
                     //This line gets the Stage information
