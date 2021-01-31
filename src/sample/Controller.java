@@ -30,11 +30,11 @@ public class Controller {
             while (reader2.hasNext()) {
 
                 String s = reader2.nextLine();
-                String str[] = s.split(" ");
+                String str[] = s.split(",");
 
-                if (data.equals(str[1])) {
-                    ta1.setText("Name: " + str[0] + "\n" + "NID Number: " + str[1] + "\n" + "Age: " + str[2] + "\n" + "Address: " + str[3] + "\n" );
-
+                if (data.equals(str[3])) {
+                    ta1.setText("Name: " + str[0] + "\n" + "Father's Name: " + str[1] + "\n" + "Mother's Name: " + str[2] + "\n"+ "NID Number: " + str[3] + "\n" + "Date Of Birth: " + str[4] + "\n" );
+                    tf1.clear();
                 }
             }
             reader2.close();
