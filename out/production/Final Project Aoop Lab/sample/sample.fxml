@@ -21,7 +21,10 @@
       <AnchorPane prefHeight="425.0" prefWidth="489.0">
          <children>
             <TextField fx:id="tf1" layoutX="120.0" layoutY="33.0" prefHeight="43.0" prefWidth="345.0" />
-            <TextArea fx:id="ta1" layoutX="120.0" layoutY="112.0" prefHeight="166.0" prefWidth="345.0" />
+            <TextArea fx:id="ta1" editable="false" layoutX="120.0" layoutY="112.0" prefHeight="166.0" prefWidth="345.0">
+               <font>
+                  <Font size="18.0" />
+               </font></TextArea>
             <Button layoutX="7.0" layoutY="177.0" mnemonicParsing="false" onAction="#on" prefHeight="36.0" prefWidth="96.0" text="Information" />
             <Button layoutX="33.0" layoutY="327.0" mnemonicParsing="false" onAction="#next" prefHeight="61.0" prefWidth="123.0" text="Vote">
                <font>
