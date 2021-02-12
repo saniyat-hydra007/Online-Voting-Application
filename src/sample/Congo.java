@@ -19,5 +19,6 @@ public class Congo {
 
         window.setScene(tableViewScene);
         window.show();
+
     }
 }
