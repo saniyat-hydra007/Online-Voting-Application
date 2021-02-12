@@ -1,4 +1,5 @@
 package sample;
+//this is a congratulation page code
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
