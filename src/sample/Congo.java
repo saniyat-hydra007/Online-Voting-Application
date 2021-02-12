@@ -11,6 +11,7 @@ import java.io.IOException;
 
 public class Congo {
 
+
     public void ok(javafx.event.ActionEvent event) throws IOException {
         Parent tableViewParent = FXMLLoader.load(getClass().getResource("sample.fxml"));
         Scene tableViewScene = new Scene(tableViewParent);
